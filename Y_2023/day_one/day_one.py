@@ -1,9 +1,9 @@
 def main():
     puzzle_input = readFile()
     # Task 1 Solution
-    print(sum_calibrationValues(puzzle_input))
+    print(f"Task 1\nOutput: {sum_calibrationValues(puzzle_input)}")
     # Task 2 Solution
-    print(updated_sumCalibrationValues(puzzle_input))
+    print(f"Task 2\nOutput: {updated_sumCalibrationValues(puzzle_input)}")
 
 
 def readFile():

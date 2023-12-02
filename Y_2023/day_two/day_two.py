@@ -1,7 +1,9 @@
 def main():
     puzzle_input = readFile()
-    # Part One
-    print(f"Part One\nOutput: {validGame(puzzle_input)}")
+    # Task 1 Solution
+    print(f"Task 1\nOutput: {validGame(puzzle_input)}")
+    # Task 2 Solution
+    print(f"Task 2\nOutput: {powerOfGame(puzzle_input)}")
 
 
 def readFile():
@@ -38,6 +40,28 @@ def validGame(puzzle_input):
         if valid_sets == len(outcomes):
             sum_of_ideal_games += id
     return sum_of_ideal_games
+
+
+def powerOfGame(puzzle_input):
+    sum_of_power = 0
+    for game in puzzle_input:
+        fewest_num_cubes = {'r': 0, 'g': 0, 'b': 0}
+        game_power = 1
+        outcomes = game[1:]
+        for s in outcomes:
+            s = s.split()  # reformat
+            p_num = 0
+            while p_num + 1 < len(s):
+                if fewest_num_cubes[s[p_num + 1][0]] < int(s[p_num]):
+                    fewest_num_cubes[s[p_num + 1][0]] = int(s[p_num])
+                p_num += 2
+        # Calculating Power for Game
+        for value in fewest_num_cubes.values():
+            game_power *= value
+        sum_of_power += game_power
+    return sum_of_power
+
+    # Helper Functions
 
 
 def validSet(set_data):
