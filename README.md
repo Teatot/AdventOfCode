@@ -8,7 +8,7 @@
 </br>
   <!-- Body 1 Begins --!>
   <body>
-    <p><b>IN PROGRESS</b>: Add a brief thought process to each solution for each day</p>
+    <p><b>IN PROGRESS</b>: Add a brief thought process and explaination to each solution for each day</p>
   </body>
   <!-- Body 2 Ends --!>
 </html>
