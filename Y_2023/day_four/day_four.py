@@ -62,10 +62,10 @@ def get_copies(cards, start, amount):
     total = 0
     if amount == 0:  # When the given card does not produce any winners, there no more copies
         return amount
-    for i in range(1, amount + 1):
-        cur_wins = get_wins(cards[start + i])
-        total += cur_wins
-        total += get_copies(cards, start + i, cur_wins)
+    for i in range(1, amount + 1):  # Finding copies for the copies
+        cur_wins = get_wins(cards[start + i])  # Get the amount of copies won
+        total += cur_wins  # Adds the amount of copies won to the local total
+        total += get_copies(cards, start + i, cur_wins)  # Gets the copies from the won copies
     return total
 
 
