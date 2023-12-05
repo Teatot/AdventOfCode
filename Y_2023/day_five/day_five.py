@@ -85,7 +85,6 @@ def find_TrueLowestLocation(almanac):
         size = len(seeds)
         i = 0
         while i < size:
-            print(f"CUR TUPLE: {seeds[i]}.\t|\tCUR LIST: {seeds}")
             seeds[i], size = transform_to_item(seeds, i, item_map, size)
             i += 1
     # Finding the Lowest
@@ -121,8 +120,6 @@ def transform_to_item(seeds_data, ind, conversions, size):
         if 0 < diff <= conv[-1]:
             spot_remain = conv[-1] - diff
             seeds_left = spot_remain - seed_range
-            print(f"Cur Conversion: {conv}\nRemaining: {spot_remain}\tLeft: {seeds_left}\n\n")
-            time.sleep(0.5)
             if seeds_left >= 0:
                 return (conv[0] + diff, seed_range), size
 
