@@ -176,12 +176,5 @@ def find_interval(hand, hand_type):
     return start, end
 
 
-def find_bets_value(cards, desired_card):
-    for card, value in cards:
-        if card == desired_card:
-            return value
-    return 0
-
-
 if __name__ == '__main__':
     main()
