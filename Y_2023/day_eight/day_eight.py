@@ -42,7 +42,7 @@ def num_required_steps(instructions, nodes):
 def true_num_required_steps(instructions, nodes):
     starting_nodes = find_starting_nodes(nodes)
     total_steps = [find_num_steps(instructions, nodes, node) for node in starting_nodes]
-    return math.lcm(*total_steps)
+    return math.lcm(*total_steps)  # Unpack
 
 
 def find_num_steps(instructions, nodes, start_node):
