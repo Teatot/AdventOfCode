@@ -95,3 +95,4 @@ def check_start_next_movements(loop_map, x_pos, y_pos):
 
 if __name__ == '__main__':
     main()
+
