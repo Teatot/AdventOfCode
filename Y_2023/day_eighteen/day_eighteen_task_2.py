@@ -1,4 +1,4 @@
-# Using Shoelace Theorem to Solve for the Area
+# Using Shoelace and Pick's Theorem to Solve for the Area
 def main():
     puzzle_input = readFile()
     # Output
@@ -18,7 +18,7 @@ def readFile():
 def compute_area(hexadecimals):
     instruct = compute_instructions(hexadecimals)
     vertices = compute_vertices(instruct)
-    return shoelace_formula(instruct, vertices)
+    return shoelace_formula(instruct, vertices) + (compute_boarder_length(instruct))/2 + 1  # Similar to Pick's Theorem
 
 
 def shoelace_formula(instruct, vertices):
@@ -26,7 +26,7 @@ def shoelace_formula(instruct, vertices):
     for i in range(1, len(vertices)):
         x, y = vertices[i - 1], vertices[i]
         sumd += (x[0] * y[1] - x[1] * y[0])
-    return (abs(sumd) + compute_boarder_length(instruct)) / 2 + 1
+    return abs(sumd) / 2
 
 
 def compute_vertices(instruct):  # Left and Up - Negative (Coordinate System)
