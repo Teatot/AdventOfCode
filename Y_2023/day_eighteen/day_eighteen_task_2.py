@@ -29,7 +29,7 @@ def shoelace_formula(instruct, vertices):
     return abs(sumd) / 2
 
 
-def compute_vertices(instruct):  # Left and Up - Negative (Coordinate System)
+def compute_vertices(instruct):  # Left and Down - Negative (Coordinate System)
     cur_x, cur_y = 0, 0
     vertices = []
     for direct, val in instruct:
