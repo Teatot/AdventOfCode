@@ -18,7 +18,7 @@ def readFile():
 def compute_area(hexadecimals):
     instruct = compute_instructions(hexadecimals)
     vertices = compute_vertices(instruct)
-    return shoelace_formula(instruct, vertices) + (compute_boarder_length(instruct))/2 + 1  # Similar to Pick's Theorem
+    return shoelace_formula(instruct, vertices) + (compute_boarder_length(instruct))/2 + 1  # Pick's Theorem (i + b) where i = A - b/2 + 1
 
 
 def shoelace_formula(instruct, vertices):
