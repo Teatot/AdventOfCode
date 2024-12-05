@@ -45,7 +45,7 @@ public class d3 {
     }
 
     private static String[] readFile() {
-        String file_name = "/Users/tonychen/Documents/AdventofCode/src/y2024/Day3/pzleinput.txt";
+        String file_name = "";
 
         String[] collection = new String[6];
 
