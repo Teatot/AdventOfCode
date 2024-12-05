@@ -198,7 +198,7 @@ public class d4 {
         char bottomRight = 'S';
 
         for ( int i = 0; i < 4; ++i ) {
-            System.out.println(topLeft);
+
             int cur_count = 0;
             // Upper Restriction
             if (row - 1 >= 0) {
