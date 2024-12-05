@@ -74,7 +74,7 @@ public class d2 {
 
 
     private ArrayList<String[]> readFile() {
-        String file_name = "/Users/tonychen/Documents/AdventofCode/src/y2024/Day2/pzleinput.txt";
+        String file_name = "";
 
         ArrayList<String[]> collection = new ArrayList<>();
 
