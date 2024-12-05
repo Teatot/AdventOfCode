@@ -246,7 +246,7 @@ public class d4 {
     }
 
     private static ArrayList<ArrayList<Character>> readFile() {
-        String file_name = "/Users/tonychen/Documents/AdventOfCode/src/y2024/Day4/pzleinput.txt";
+        String file_name = "";
 
         ArrayList<ArrayList<Character>> new_grid = new ArrayList<>();
 
