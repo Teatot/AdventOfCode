@@ -3,7 +3,7 @@ CFLAGS=-Wall -std=c99
 
 .PHONY: all clean
 
-all: day1 day2 day3 day4
+all: day1 day2 day3 day4 day5
 
 day1: 
 	$(CC) $(CFLAGS) day1.c -o day1.e
@@ -17,6 +17,8 @@ day3:
 day4: 
 	$(CC) $(CFLAGS) day4.c -o day4.e	
 
+day5: 
+	$(CC) $(CFLAGS) day5.c -o day5.e	
 
 clean:
 	rm -f  *.e
